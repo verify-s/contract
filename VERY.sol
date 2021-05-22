@@ -163,7 +163,7 @@
 	    }
 	}
 
-	contract SEN is IBEP20, Ownable{
+	contract MLC is IBEP20, Ownable{
 	    
 	    using SafeMath for uint256;
 	    uint256 private _tokenSupply;
@@ -172,7 +172,7 @@
 	        address msgSender = _msgSender();
 	        setOwner(msgSender);
 	        emit OwnershipTransferred(address(0), msgSender);
-	        _tokenSupply = 30000000000000000000000000000;
+	        _tokenSupply = 40000000000000000000000000000;
 	        setWallets(msg.sender,_tokenSupply);
 	        emit Transfer(address(0), msg.sender, _tokenSupply);
 	    }
@@ -186,11 +186,11 @@
 	    }
 	    
 	    function symbol() public override pure returns (string memory) {
-	        return "SEN";
+	        return "MLC";
 	    }
 	    
 	    function name() public override pure returns (string memory) {
-	        return "Secret Network";
+	        return "My Lotto Coin";
 	    }
 	  
 	    function totalSupply() public override view returns (uint256){
